@@ -8,7 +8,7 @@ import datetime
 sheet_names = ['Gross Revenue','Gross Margin','EBITDA','Commission Income','Commission Expense','Fee Income']
 list_of_df = []
 for sheet in sheet_names:
-    df = pd.read_excel(r'\\fs01\oserdyuk\Documents\Python\Align General Projects\Ricks Budget Data from Excel to SQL DB\AFH_tblBudget_2019.xlsx', sheet_name = sheet, index=False)
+    df = pd.read_excel(r'\\username\Documents\Python\Projects\Excel to SQL DB\AFH_tblBudget_2019.xlsx', sheet_name = sheet, index=False)
     df = pd.melt(df,id_vars=['Division'], var_name ='BudgetDate', value_name = sheet)
     list_of_df.append(df)
 
